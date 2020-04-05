@@ -1,0 +1,54 @@
+Task a
+
+To stick to OOP style of coding, an additional class file was 
+created for emoji (emoji.py). It holds the kind of emoji, the corresponding
+matrix for the sensehat and functions to display it in colours 
+red, green and blue. 
+
+animatedEmoji.py holds the main function which creates 3
+different emoji objects and displays each of them in 3 colours
+
+Task b
+
+Similarly for this task we created an additional class file for 
+temperature (temperature.py). It holds the temperature value 
+from the sensor and initialises other variables that are acquired
+through monitorAndDisplay.py (data parsed from the config.json file).
+temperature.py also has a check and display function that regulates 
+the colour and value of the temperature that is being displayed.
+
+monitorAndDisplay retrieves temperature value from sensor and passes 
+all the required variables constantly to temperature.py in an infinite
+loop.
+
+Task c
+
+(Part 1)
+This task has a die class (die.py), which makes a die object with properties 
+as its value, with functions that simulate a roll and display die faces
+between 1-6. It also has a function that has code for detecting "shake"
+motion of the sensehat. 
+
+electronicDie.py creates a die object and continuously checks for 
+shake motion and calls the relevant die function when required
+
+(Part 2)
+This part of the task uses files from the previous part. An additional
+file (player.py) was created to store the player class. This holds the
+player number, player point count and functions for updating point and
+checking win status. 
+
+game.py consists of a main function which creates two players (player 1 and 
+player 2) in the beginning and begins a turn by turn play starting with 
+player 1. At each player's turn, the device waits to be shaken, then 
+displays the die and updates the points for that player. Before the 
+start of the next turn, a check function is called which checks if 
+either player has already won or not. This continues until there is a 
+winner. 
+Once this is done, a function is called which writes the winner's record
+to the winner.csv file. The row format is: Player,Score,Time
+
+
+
+
+
