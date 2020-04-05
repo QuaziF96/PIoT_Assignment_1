@@ -1,7 +1,7 @@
 from sense_hat import SenseHat
 from time import sleep
 import json
-from Temperature import Temperature
+from temperature import Temperature
 
 with open('config.json') as json_file:
     parsed_json = json.load(json_file)
