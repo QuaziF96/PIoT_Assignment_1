@@ -6,6 +6,7 @@ class Die(ABC):
 
     g = (57,255,20) #neon green
     b = (0,0,0) #black
+    value = 0
 
     one = [
     b,b,b,b,b,b,b,b,
@@ -72,6 +73,7 @@ class Die(ABC):
 
     def roll(self,sense):
         n = randint(1,6)
+        self.value = n
         if n == 1:
             sense.set_pixels(self.one)
         elif n == 2:
@@ -86,6 +88,19 @@ class Die(ABC):
             sense.set_pixels(self.six)
         sleep(1)
             
+    def getValue(self):
+        return self.value
+
+    def checkShake(self,sense):
+        x, y, z = sense.get_accelerometer_raw().values()
+
+        x = abs(x)
+        y = abs(y)
+        z = abs(z)
+
+        if x > 1.5 or y > 1.5 or z > 1.5:
+            return True
+        return False  
 
 
 
