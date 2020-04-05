@@ -30,7 +30,7 @@ def senseTempAndDisplay():
             print('hello')
             #display number with red    
             sense.show_message(str(temp),text_colour=red)
-        sleep(4)    
+        sleep(10)    
 
 
 senseTempAndDisplay()
