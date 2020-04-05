@@ -6,7 +6,7 @@ class Die(ABC):
 
     g = (57,255,20) #neon green
     b = (0,0,0) #black
-    value = 0
+    value = 0 #die face value initialised
 
     one = [
     b,b,b,b,b,b,b,b,

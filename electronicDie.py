@@ -2,13 +2,6 @@ from sense_hat import SenseHat
 from random import randint
 from die import Die
 
-
-
-
-
-g = (57,255,20) #neon green
-y = (0,0,0) #black
-
 class Main:
     @staticmethod
     def main():
